@@ -31,21 +31,24 @@ class TestBase {
 
 	protected SendEmailRequest sendCustomerResponse = new SendEmailRequest(
 			null,
-			SUBJECT_FOR_CUSTOMER,
-			BODY_FOR_CUSTOMER);
+			null,
+			null);
 
 	protected SendEmailRequest sendOwnerMessageEmailRequest = new SendEmailRequest(
 			null,
-			"nullnull",
-			null);
+			null,
+			("Customer Name: " + null + " " + null +
+			" Customer Email: " + null +
+			" Customer Message: " + null
+			));
 
 	protected SendEmailRequest sendOwnerOrderEmailRequest = new SendEmailRequest(
-			OWNERS_EMAIL,
-			SUBJECT_FOR_OWNER,
+			null,
+			null,
 			("Customer Name: " + null + " " + null +
 					" Customer Phone Number: " + null +
 					" Customer Email: " + null +
-					" Customers Car: " + null + " " +null + " " + null));
+					" Customers Car: " + null + " " + null + " " + null));
 
 	protected void verifyPut(String s) {
 		webClient

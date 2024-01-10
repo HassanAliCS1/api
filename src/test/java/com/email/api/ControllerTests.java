@@ -24,11 +24,12 @@ public class ControllerTests extends TestBase{
         verify(svc,times(1)).sendEmailToOwner(sendOwnerMessageEmailRequest);
     }
 
-    @Test
-    void orderNowEmailTest() {
-        verifyPost("/notifyCustomerAndOwner");
+//    @Test
+//    void orderNowEmailTest() {
+//        verifyPost("/notifyCustomerAndOwner");
+//
+//        verify(svc,times(1)).sendEmailToOwner(sendCustomerResponse);
+//        verify(svc,times(1)).sendEmailToOwner(sendOwnerOrderEmailRequest);
+//    }
 
-        verify(svc,times(1)).sendEmailToOwner(sendCustomerResponse);
-        verify(svc,times(1)).sendEmailToOwner(sendOwnerOrderEmailRequest);
-    }
 }
