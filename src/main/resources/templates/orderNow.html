@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Now | EMKEE </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Saira+Condensed?query=Saira+Condensed">
+    <link rel="stylesheet" href="" th:href="@{../static/css/output.css}" >
+
+</head>
+<body>
+<!--Header-->
+    <div class="header top-0 bg-[#ebdacc] shadow-md flex items-center justify-between px-8 py-02">
+        <!-- logo -->
+        <div class="w-3/12">
+            <img th:src="@{/img/logoBlack.png}" width="100" height="100"  alt="logo"/>
+        </div>
+
+        <!-- navigation -->
+        <nav class="nav font-semibold text-lg">
+            <ul class="flex items-center">
+                <li class="p-4 border-b-2 border-[#A46B37] border-opacity-0 hover:border-opacity-100 hover:text-[#A46B37] duration-200 cursor-pointer active">
+                    <a href="">Home</a>
+                </li>
+                <li class="p-4 border-b-2 border-[#A46B37] border-opacity-0 hover:border-opacity-100 hover:text-[#A46B37] duration-200 cursor-pointer">
+                    <a href="">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- buttons --->
+        <div class="w-3/12 flex justify-end">
+            <a href="">
+                <button class="bg-[#000] font-bold text-white px-5 py-2 rounded-full hover:bg-[#A46B37]">ORDER NOW</button>
+            </a>
+        </div>
+    </div>
+
+<!--order now form -->
+
+    <div>
+        <div class="border-y border-gray-900/10 xl:px-52 xl:py-64 xl:pb-72 sm:py-10 sm:px-10 sm:pb-10" style="background-image: url('/img/Background.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <h1 class="text-white font-extrabold xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl mb-8">
+                <span class="text-[#A46B37]">ORDER</span> NOW!
+            </h1>
+            <p class="mt-1 text-lg leading-6 text-gray-600">Fill out your detail and we will be right with you!</p>
+
+            <form action="#" th:action="@{/notifyCustomerAndOwner}" th:object="${customerOrder}" method="POST" class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="sm:col-span-3">
+                    <label for="firstName" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+                    <div class="mt-2">
+                        <input type="text" name="firstName" id="firstName" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-3">
+                    <label for="lastName" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+                    <div class="mt-2">
+                        <input type="text" name="lastName" id="lastName" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-3">
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                    <div class="mt-2">
+                        <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+
+                <div class="col-span-3">
+                    <label for="phoneNumber" class="block text-sm font-medium leading-6 text-gray-900">Phone Number</label>
+                    <div class="mt-2">
+                        <input type="text" name="phoneNumber" id="phoneNumber" autocomplete="phone-number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-2 sm:col-start-1">
+                    <label for="carMake" class="block text-sm font-medium leading-6 text-gray-900">Make</label>
+                    <div class="mt-2">
+                        <input type="text" name="carMake" id="carMake" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label for="carModel" class="block text-sm font-medium leading-6 text-gray-900">Model</label>
+                    <div class="mt-2">
+                        <input type="text" name="carModel" id="carModel" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label for="carYear" class="block text-sm font-medium leading-6 text-gray-900">Year</label>
+                    <div class="mt-2">
+                        <input type="text" name="carYear" id="carYear" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                    </div>
+                </div>
+                <button type="submit" class="bg-[#000] font-bold text-white px-5 py-2 rounded-full hover:bg-[#A46B37]">ORDER NOW</button>
+            </form>
+        </div>
+    </div>
+
+
+<!--Footer-->
+    <div>
+        <hr class="text-white py-1 bg-black" />
+        <section class="bg-white">
+            <div class="max-w-lg bg-[#ebdacc] px-4 pt-24 py-8 mx-auto text-left md:max-w-none md:text-center">
+                <h1 class="text-3xl font-extrabold leading-10 tracking-tight text-left text-white text-center sm:leading-none md:text-6xl text-4xl lg:text-7xl">
+                    <span class="inline md:block">Find Us</span>
+                    <span class="mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-emerald-400 to-green-500 md:inline-block">
+                                To unlock <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-cyon-400 to-purple-300">the mystery together!</span>
+                            </span>
+                </h1>
+                <div class="mx-auto rounded-lg font-black mt-5 text-zinc-400 md:mt-12 md:max-w-lg text-center lg:text-lg">
+                    <a href="">
+                        <button class="bg-tkb border text-sm text-black py-3 px-7 rounded-full hover:bg-[#A46B37]">
+                            ORDER NOW!
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr class="text-white" />
+        <footer class="bg-[#ebdacc] pb-5">
+            <div class="max-w-screen-xl px-4 pt-8 mx-auto sm:px-6 lg:px-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <div class="flex justify-center text-teal-300 sm:justify-start">
+                        <img class="rounded-full" th:src="@{/img/logoBlack.png}" width="100" height="100" alt="Logo" />
+                    </div>
+
+                    <p class="mt-4 text-sm text-center text-gray-400 lg:text-right lg:mt-0">
+                        T&C &nbsp; Privacy & Policy &nbsp; <a href="https://www.linkedin.com/in/ha9337033/">Developer</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
