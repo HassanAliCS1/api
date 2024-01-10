@@ -9,6 +9,29 @@
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Saira+Condensed?query=Saira+Condensed">
     <link rel="stylesheet" href="" th:href="@{../static/css/output.css}" >
 
+    <script>
+        function checkForBlank(){
+            if (document.getElementById('firstName').value === ""){
+                alert("Please enter your First Name.");
+                return false;
+            }
+            else if (document.getElementById('lastName').value === ""){
+                alert("Please enter your Last Name.");
+                return false;
+            }
+            else if (document.getElementById('email').value === ""){
+                alert("Please enter your Email.");
+                return false;
+            }
+            else if (document.getElementById('message').value === ""){
+                alert("Please enter a Message.");
+                return false;
+            }
+
+
+        }
+    </script>
+
 </head>
 <body>
 <!--Header-->
@@ -45,7 +68,7 @@
         </h1>
         <p class="mt-1 text-lg leading-6 text-gray-600">Got a message or improvements? Let Us Know!</p>
 
-        <form action="#" th:action="@{/contactUsByEmail}" th:object="${message}" method="POST" class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <form action="#" th:action="@{/contactUsByEmail}" th:object="${message}" method="POST" onsubmit="return checkForBlank()" class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-3">
                 <label for="firstName" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
                 <div class="mt-2">
@@ -73,7 +96,7 @@
                     <textarea type="text" id="message" name="message" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                 </div>
             </div>
-            <button type="submit" class="bg-[#000] font-bold text-white px-5 py-2 rounded-full hover:bg-[#A46B37]">ORDER NOW</button>
+            <button type="submit" class="bg-[#000] font-bold text-white px-5 py-2 rounded-full hover:bg-[#A46B37]">SEND MESSAGE</button>
         </form>
     </div>
 
