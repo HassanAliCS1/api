@@ -2,7 +2,6 @@ package com.email.api.controller;
 
 import com.email.api.model.CustomerOrder;
 import com.email.api.model.CustomerMessage;
-import com.email.api.model.EmailContents;
 import com.email.api.model.SendEmailRequest;
 import com.email.api.service.EmailService;
 import org.springframework.stereotype.Controller;
