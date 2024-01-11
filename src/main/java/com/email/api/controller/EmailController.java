@@ -4,6 +4,7 @@ import com.email.api.model.CustomerOrder;
 import com.email.api.model.CustomerMessage;
 import com.email.api.model.SendEmailRequest;
 import com.email.api.service.EmailService;
+import jakarta.mail.MessagingException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -67,6 +68,13 @@ public class EmailController {
 
         return "redirect:/";
     }
+    @GetMapping("/testHtmlEmail")
+    public String testHTML() throws MessagingException {
+        svc.sendHtmlEmail();
+
+        return null;
+    }
+
 
 
 
