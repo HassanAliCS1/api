@@ -2,7 +2,7 @@ package com.email.api.model;
 
 public class HtmlEmail {
 
-    public static final String HTML_EMAIL_CONTENTS = "<html lang=\"en\" xmlns:th=\"http://www.thymeLeaf.org\">" +
+    public static final String HTML_EMAIL_CONTENTS_FOR_CUSTOMER = "<html lang=\"en\" xmlns:th=\"http://www.thymeLeaf.org\">" +
             "<head>\n" +
             "  <meta charset=\"UTF-8\">\n" +
             "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
@@ -56,44 +56,28 @@ public class HtmlEmail {
             "    }\n" +
             "  </style>\n" +
             "</head>\n" +
-            "<body>\n" +
-            "  <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\">\n" +
+            "<body>\n " +
+            "<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\" width=\"600\">\n" +
             "    <tr>\n" +
-            "      <td>\n" +
-            "        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\" width=\"600\">\n" +
-            "          <tr>\n" +
-            "            <td class=\"logo\">\n" +
-            "              <Img th:src=\"cid:myLogo\" />\n" +
-            "            </td>\n" +
-            "          </tr>\n" +
-            "          <tr>\n" +
-            "            <td class=\"content\">\n" +
-            "              <img width=\"620\" th:src=\"cid:myBanner\" alt=\"Banner Image\">\n" +
-            "              <div class=\"box-infos\" style=\"padding-bottom: 0;\">\n" +
-            "                <h1 style=\"font-size: 32px; font-weight: bold; text-align: center;\">Hi Hassan,</h1>\n" +
-            "                <h2 style=\"font-size: 26px; font-weight: bold; text-align: center;\">We have received your order.</h2>\n" +
-            "                <hr class=\"text-white\">\n" +
-            "                <p class=\"paragraph\" style=\"font-size: 16px;\">We will contact you shortly!</p>\n" +
-            "              </div>\n" +
-            "              <div class=\"container-gif\">\n" +
-            "                <img th:src=\"cid:myGif\" width=\"480\" height=\"425\" frameborder=\"0\" class=\"giphy-embed\" allowfullscreen></img>\n" +
-            "              </div>\n" +
-            "            </td>\n" +
-            "          </tr>\n" +
-            "          <tr>\n" +
-            "            <td class=\"container-image-footer\">\n" +
-            "              <!-- Image in the footer goes here -->\n" +
-            "            </td>\n" +
-            "          </tr>\n" +
-            "          <tr>\n" +
-            "            <td>\n" +
-            "              <p class=\"footer-text\">&copy; 2023 | Emkee Inc. , 11 Henley St, Birmingham, B11 1JD, U.K | www.EmkeeAutokeys.com</p>\n" +
-            "            </td>\n" +
-            "          </tr>\n" +
-            "        </table>\n" +
-            "      </td>\n" +
+            "        <td class=\"content\">\n" +
+            "            <div class=\"box-infos\" style=\"padding-bottom: 0;\">\n" +
+            "                    <h1 style=\"font-size: 32px; font-weight: bold; text-align: center;\">Thank You!,</h1>\n" +
+            "                    <h2 style=\"font-size: 26px; font-weight: bold; text-align: center;\">We have received your order.</h2>\n" +
+            "                    <hr class=\"text-white\">\n" +
+            "                    <p class=\"paragraph\" style=\"font-size: 16px;\">We will contact you shortly!</p>\n" +
+            "                     </div>\n" +
+            "                     <div class=\"container-gif\">\n" +
+            "                        <iframe src=\"https://giphy.com/embed/tLGdBxGiGBNkI\" width=\"480\" height=\"425\" frameBorder=\"0\" padding-left=\"20px\" class=\"giphy-embed\" allowFullScreen></iframe>\n" +
+            "             </div>\n" +
+            "         </td>\n" +
+            "   </tr>\n" +
+            "    <tr>\n" +
+            "          <td>\n" +
+            "                 <p class=\"footer-text\">&copy; 2023 | Emkee Inc., 11 Henley St, Birmingham, B11 1JD, U.K | <a th:href = \"\">www.EmkeeAutokeys.com</a>></p>\n" +
+            "          </td>\n" +
             "    </tr>\n" +
-            "  </table>\n" +
+            "</table>" +
+
             "</body>" +
             "</html>";
 }

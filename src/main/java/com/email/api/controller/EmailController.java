@@ -49,7 +49,7 @@ public class EmailController {
     }
 
     @PostMapping("/notifyCustomerAndOwner")
-    public String notifyCustomerAndOwner(CustomerOrder customerOrder) {
+    public String notifyCustomerAndOwner(CustomerOrder customerOrder) throws MessagingException {
 
         var dtoCustomer = new SendEmailRequest(
                 customerOrder.email(),
@@ -67,12 +67,6 @@ public class EmailController {
         svc.sendEmailToOwner(dtoOwner);
 
         return "redirect:/";
-    }
-    @GetMapping("/testHtmlEmail")
-    public String testHTML() throws MessagingException {
-        svc.sendHtmlEmail();
-
-        return null;
     }
 
 

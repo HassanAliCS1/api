@@ -5,9 +5,8 @@ import jakarta.mail.MessagingException;
 
 public interface EmailService {
 
-    void sendEmailToCustomer(SendEmailRequest sendEmailRequest);
+    void sendEmailToCustomer(SendEmailRequest sendEmailRequest) throws MessagingException;
 
     void sendEmailToOwner(SendEmailRequest sendEmailRequest);
 
-    void sendHtmlEmail() throws MessagingException;
 }
