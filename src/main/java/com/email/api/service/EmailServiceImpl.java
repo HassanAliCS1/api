@@ -52,7 +52,7 @@ public class EmailServiceImpl implements EmailService{
 
         message.setFrom(BUSINESSES_EMAIL);
         message.setTo(OWNERS_EMAIL);
-        message.setSubject(SUBJECT_FOR_OWNER);
+        message.setSubject(sendEmailRequest.subject());
         message.setText(sendEmailRequest.body());
 
         mailSender.send(message);

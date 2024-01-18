@@ -39,7 +39,7 @@ public class EmailController {
     public String contactUsByEmail(@ModelAttribute("message") CustomerMessage message) {
         var dtoMessage = new SendEmailRequest(
                 null,
-                null,
+                "New Message Alert!",
                 ("Customer Name: " + message.firstName() + " " + message.lastName() +
                         " Customer Email: " + message.email() +
                         " Customer Message: " + message.message()
@@ -57,7 +57,7 @@ public class EmailController {
                 null);
         var dtoOwner = new SendEmailRequest(
                 null,
-                null,
+                "New Order Alert!!!",
                 ("Customer Name: " + customerOrder.firstName() + " " + customerOrder.lastName() +
                         " Customer Phone Number: " + customerOrder.phoneNumber() +
                         " Customer Email: " + customerOrder.email() +
