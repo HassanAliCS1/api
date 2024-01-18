@@ -38,8 +38,10 @@
     </div>
 <!--    section one -->
     <div>
-        <div class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30">
-            <img th:src="@{/img/homepage_banner.png}" class="absolute top-0 left-0 min-h-full ob w-full" alt=""/>
+        <div class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30 bg-black">
+            <video autoplay muted loop class="absolute top-0 left-0 min-h-full ob w-full" alt="">
+                <source th:src="@{/video/B-Roll.mp4}" type="video/mp4">
+            </video>
             <div class="relative z-20 max-w-screen-lg mx-auto grid grid-cols-12 h-full items-center">
                 <div class="col-span-6">
                     <span class="uppercase text-white text-xs font-bold mb-2 block">EMKEE | Autokeys</span>
@@ -143,21 +145,32 @@
                     style="width: 100%; height: 50vh; flex-shrink: 1; overflow: hidden; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);"></iframe>
         </div>
 
-        <!-- Column -->
-        <div class="col-span-10 xl:col-span-4 lg:col-span-4 md:col-span-10 p-8">
-            <div class="pl-16 relative flex items-end flex-col before:block before:absolute before:h-1/6 before:w-4 before:bg-[#A46B37] before:bottom-0 before:left-0 before:rounded-lg before:transition-all group-hover:before:bg-black overflow-hidden">
-                <div class="absolute top-0 left-0 bg-[#A46B37] px-12 py-14 flex flex-col justify-center rounded-xl group-hover:bg-sky-600 transition-all " style="@media only screen and (max-width: 640px){width: 10%} width: 60%">
-                    <span class="block mb-10 font-bold group-hover:text-orange-300 text-lg">HERE WE ARE</span>
-                    <h2 class="text-white font-bold text-3xl pt-8">
-                        What started as a tiny team mostly dedicated Quality Key duplication has grown.
-                    </h2>
-                </div>
 
-                <div class="rounded-xl overflow-hidden">
-                    <img th:src="@{/img/emkkeelive.jpeg}" alt=""/>
+        <div class="m-2 space-y-2 col-span-10 xl:col-span-4 lg:col-span-4 md:col-span-10 p-8">
+            <div
+                    class="group flex flex-col gap-1 rounded-lg p-5 text-gray"
+                    tabindex="1">
+                <div style="@media only screen and (max-width: 640px){width: 10%} width: 60%" class=" group relative m-0 flex h-96 w-96 rounded-xl ring-gray-900/5 sm:mx-10 sm:max-w-lg overflow-hidden">
+                    <div class="z-10 h-full w-full overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
+                        <img th:src="@{/img/emkkeelive.jpeg}" class="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110" alt="" />
+                    </div>
+                    <div style="background-color: Gray; width:70%;" class="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
+                        <h1 class="text-lg font-bold text-white ">M.K</h1>
+                        <h2 class="text-m font-light text-gray-200 ">... or connect online </h2>
+                    </div>
+
                 </div>
+                <p class="pl-5 text-gray-400 hover:text-gray-500"><a target="_blank" href="https://www.instagram.com/emkee.1?igsh=ODQ2OHllZmRnNzc=" >
+                    <span class="sr-only">Instagram</span>
+
+
+                    &nbsp;<span style="font-size: .8em; font-style: italic;">connect with Us on Instagram</span>
+                </a>
+                </p>
+
             </div>
         </div>
+
     </div>
 <!--Footer-->
     <div>
