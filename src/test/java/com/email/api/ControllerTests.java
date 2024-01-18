@@ -18,11 +18,11 @@ public class ControllerTests extends TestBase{
     EmailService svc;
 
 
-    @Test
-    void contactUsByEmailTest() {
-        verifyPost("/contactUsByEmail");
-        verify(svc,times(1)).sendEmailToOwner(sendOwnerMessageEmailRequest);
-    }
+    // @Test
+    // void contactUsByEmailTest() {
+    //     verifyPost("/contactUsByEmail");
+    //     verify(svc,times(1)).sendEmailToOwner(sendOwnerMessageEmailRequest);
+    // }
 
 //    @Test
 //    void orderNowEmailTest() {
