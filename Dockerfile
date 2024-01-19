@@ -9,7 +9,7 @@ FROM amazoncorretto:17
 # Expose the port that your Spring Boot application will run on
 EXPOSE 8080
 
-ADD target/emkee-live0.jar emkee-live0.jar
+ADD target/api.jar api.jar
 
 # Specify the command to run on container startup
-ENTRYPOINT ["java", "-jar", "emkee-live0.jar"]
+ENTRYPOINT ["java", "-jar", "api.jar"]
