@@ -73,7 +73,7 @@ public class HtmlEmail {
             "   </tr>\n" +
             "    <tr>\n" +
             "          <td>\n" +
-            "                 <p class=\"footer-text\">&copy; 2023 | Emkee Inc., 11 Henley St, Birmingham, B11 1JD, U.K | <a th:href = \"\">www.EmkeeAutokeys.com</a>></p>\n" +
+            "                 <p class=\"footer-text\">&copy; 2023 | Emkee Inc., 11 Henley St, Birmingham, B11 1JD, U.K | </p>\n" +
             "          </td>\n" +
             "    </tr>\n" +
             "</table>" +
