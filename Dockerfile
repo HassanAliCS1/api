@@ -1,17 +1,17 @@
-FROM ubuntu:latest
-LABEL authors="hassanali"
+# FROM ubuntu:latest
+# LABEL authors="hassanali"
 
-ENTRYPOINT ["top", "-b"]
+# ENTRYPOINT ["top", "-b"]
 
-# Use the official amazoncorretto base image for Java 17
-FROM amazoncorretto:17
+# # Use the official amazoncorretto base image for Java 17
+# FROM amazoncorretto:17
 
-# Expose the port that your Spring Boot application will run on
-EXPOSE 8080
+# # Expose the port that your Spring Boot application will run on
+# EXPOSE 8080
 
-ARG JAR_FILE=target/*.jar
+# ARG JAR_FILE=target/*.jar
 
-COPY ./target/api.jar api.jar
+# COPY ./target/api.jar api.jar
 
-# Specify the command to run on container startup
-ENTRYPOINT ["java", "-jar", "/api.jar"]
+# # Specify the command to run on container startup
+# ENTRYPOINT ["java", "-jar", "/api.jar"]
