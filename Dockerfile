@@ -9,7 +9,9 @@ FROM amazoncorretto:17
 # Expose the port that your Spring Boot application will run on
 EXPOSE 8080
 
+ARG JAR_FILE=target/*.jar
+
 COPY ./target/api.jar api.jar
 
 # Specify the command to run on container startup
-ENTRYPOINT ["java", "-jar", "api.jar"]
+ENTRYPOINT ["java", "-jar", "/api.jar"]
