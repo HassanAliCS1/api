@@ -8,26 +8,55 @@
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Saira+Condensed?query=Saira+Condensed">
     <link rel="stylesheet" href="" th:href="@{../static/css/output.css}" >
 
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon_io/apple-touch-icon.png}">
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/favicon_io/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/favicon_io/favicon-16x16.png}">
+
+    <script>
+        function checkForBlank(){
+            if (document.getElementById('firstName').value === ""){
+                alert("Please enter your First Name.");
+                return false;
+            }
+            else if (document.getElementById('lastName').value === ""){
+                alert("Please enter your Last Name.");
+                return false;
+            }
+            else if (document.getElementById('email').value === ""){
+                alert("Please enter your Email.");
+                return false;
+            }
+            else if (document.getElementById('message').value === ""){
+                alert("Please enter a Message.");
+                return false;
+            }
+
+
+        }
+    </script>
+
 </head>
 <body>
 <!--Header-->
     <div class="header top-0 bg-[#ebdacc] shadow-md flex items-center justify-between px-8 py-02">
         <!-- logo -->
-        <div class="w-3/12">
-            <img th:src="@{/img/logoBlack.png}" width="100" height="100"  alt="logo"/>
+        <a href="/">
+        <div class="w-3/12 hover:border-opacity-100 duration-200 cursor-pointer active">
+            <img th:src="@{/img/logoBlack.png}" width="300" height="300"  alt="logo"/>
         </div>
+        </a>
 
         <!-- navigation -->
-        <nav class="nav font-semibold text-lg">
-            <ul class="flex items-center">
-                <a href="/"><li class="p-4 border-b-2 border-[#A46B37] border-opacity-0 hover:border-opacity-100 hover:text-[#A46B37] duration-200 cursor-pointer active">
-                    Home
-                </li></a>
-                <a href="/contactUs"><li class="p-4 border-b-2 border-[#A46B37] border-opacity-0 hover:border-opacity-100 hover:text-[#A46B37] duration-200 cursor-pointer">
-                    Contact Us
-                </li></a>
-            </ul>
-        </nav>
+<!--        <nav class="nav font-semibold text-lg">-->
+<!--            <ul class="flex items-center">-->
+<!--                <a href="/"><li class="p-4 border-b-2 border-[#A46B37] border-opacity-0 hover:border-opacity-100 hover:text-[#A46B37] duration-200 cursor-pointer active">-->
+<!--                    Home-->
+<!--                </li></a>-->
+<!--                <a href="/contactUs"><li class="p-4 border-b-2 border-[#A46B37] border-opacity-0 hover:border-opacity-100 hover:text-[#A46B37] duration-200 cursor-pointer">-->
+<!--                    Contact Us-->
+<!--                </li></a>-->
+<!--            </ul>-->
+<!--        </nav>-->
 
         <!-- buttons --->
         <div class="w-3/12 flex justify-end mx-1">
@@ -117,14 +146,14 @@
 <!--Divider-->
     <div class="bg-white h-28 justify-center space-x-10 drop-shadow-md mt-10">
         <section class="flex justify-center">
-            <a href="/contactUs" class="mx-8 xl:my-4 l:my-5 md:my-5 sm:my-5 hover:font-bold duration-400">
-                <div class="mx-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"></path>
-                    </svg>
-                </div>
-                <h3>CONTACT</h3>
-            </a>
+<!--            <a href="/contactUs" class="mx-8 xl:my-4 l:my-5 md:my-5 sm:my-5 hover:font-bold duration-400">-->
+<!--                <div class="mx-6">-->
+<!--                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
+<!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"></path>-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--                <h3>CONTACT</h3>-->
+<!--            </a>-->
 
             <a href="/orderNow" class="mx-8 xl:my-4 l:my-5 md:my-5 sm:my-5 hover:font-bold duration-400">
                 <div class="mx-8">
@@ -150,23 +179,42 @@
 
 
         <div class="md:mx-auto max-w-screen-xl mx-4 space-y-2 col-span-1 my-2 my-auto overflow-hidden">
-            <div class="rounded-lg text-gray w-full">
-                <div class="group relative m-0 flex h-96 w-full sm:w-96 rounded-xl ring-gray-900/5 sm:mx-10 sm:max-w-lg overflow-hidden">
-                    <div class="z-10 h-full w-full overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
-                        <img th:src="@{/img/emkkeelive.jpeg}" class="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110" alt="" />
-                    </div>
-                    <div style="background-color: Gray; width:70%;" class="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
-                        <h1 class="text-lg font-bold text-white ">M.K</h1>
-                        <h2 class="text-m font-light text-gray-200 ">... or connect online </h2>
-                    </div>
-                </div>
+            <div class="px-10 py-10 border-y border-gray-900/10 ">
+                <h1 class="text-white font-extrabold xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl mb-8">
+                    <span class="text-[#A46B37]">CONTACT</span> US!
+                </h1>
+                <p class="mt-1 text-lg leading-6 text-gray-600">Got a message or improvements? Let Us Know!</p>
 
-                <p class="pl-5 text-gray-400 hover:text-gray-500">
-                    <a target="_blank" href="https://www.instagram.com/emkee.1?igsh=ODQ2OHllZmRnNzc=">
-                        <span class="sr-only">Instagram</span>
-                        &nbsp;<span style="font-size: .8em; font-style: italic;">connect with Us on Instagram</span>
-                    </a>
-                </p>
+                <form action="#" th:action="@{/contactUsByEmail}" th:object="${message}" method="POST" onsubmit="return checkForBlank()" class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="firstName" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+                        <div class="mt-2">
+                            <input type="text" name="firstName" id="firstName" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="lastName" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+                        <div class="mt-2">
+                            <input type="text" name="lastName" id="lastName" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-full">
+                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                        <div class="mt-2">
+                            <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full">
+                        <label for="message" class="block text-sm font-medium leading-6 text-gray-900">Message</label>
+                        <div class="mt-2">
+                            <textarea type="text" id="message" name="message" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-[#000] font-bold text-white px-5 py-2 rounded-full hover:bg-[#A46B37] text-balance">SEND MESSAGE</button>
+                </form>
             </div>
         </div>
 
@@ -198,6 +246,10 @@
                     <div class="flex justify-center text-teal-300 sm:justify-start">
                         <img class="rounded-full" th:src="@{/img/logoBlack.png}" width="100" height="100" alt="Logo" />
                     </div>
+
+                    <a href="https://www.instagram.com/emkee.1/" class="mt-4 text-sm flex justify-center text-gray-400 lg:text-right lg:mt-0" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(156 163 175);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                    </a>
 
                     <p class="mt-4 text-sm text-center text-gray-400 lg:text-right lg:mt-0">
                          &nbsp; <a href="https://www.linkedin.com/in/ha9337033/">Developer</a>
